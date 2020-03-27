@@ -8,7 +8,10 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
           integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- JQUERY -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Gloria+Hallelujah&display=swap" rel="stylesheet">
@@ -67,15 +70,15 @@
 <!-- ABOUT ME -->
 <div class="jumbotron jumbotron-fluid float-md-center" id="aboutMe">
     <div class="container">
-<!--        <h1 class="display-4">ABOUT ME</h1>-->
-<!--        <br><br>-->
+        <!--        <h1 class="display-4">ABOUT ME</h1>-->
+        <!--        <br><br>-->
         <br><br>
         <div class="justify-content-md-center" id="avatar-div">
             <div class="avatar mb-md-0 mb-4 mx-4">
                 <img src="./resources/me.JPG" class="rounded-circle z-depth-1" id="avatar-img" alt="Sample avatar">
             </div>
             <div class="mx-4" id="avatar">
-                <h4 class="font-weight-bold mb-3">David Fadida</h4>
+                <h4 class="font-weight-bold mb-3" id="avatar-title">David Fadida</h4>
                 <h6 class="font-weight-bold grey-text mb-3">Developer, Cyber Security Analyst</h6>
                 <p class="grey-text d-block" id="me-text">
                     I am a third year student in the Software and Information System Department in BGU.
@@ -93,7 +96,7 @@
 <!-- MY PHOTOS -->
 <div class="jumbotron jumbotron-fluid" id="myPhotos">
     <div class="container">
-<!--        <h1 class="display-4">MY PHOTOS</h1>-->
+        <!--        <h1 class="display-4">MY PHOTOS</h1>-->
         <br><br>
         <h3>Enjoy My Favorite Photos</h3>
         <div id="photos">
@@ -125,10 +128,10 @@
 <!-- MY PLAYLIST -->
 <div class="jumbotron jumbotron-fluid" id="myPlaylist">
     <div class="container">
-<!--        <h1 class="display-4">MY PLAYLIST</h1>-->
+        <!--        <h1 class="display-4">MY PLAYLIST</h1>-->
         <br><br>
         <h3>Enjoy My Favorite Music</h3>
-        <br><br><br>
+        <br><br>
         <iframe width="560"
                 height="315"
                 src="https://www.youtube.com/embed/videoseries?list=PLXDm2cr3AfgWNE167nmXmeEI4fIsT2Ee_"
@@ -143,9 +146,9 @@
 <!-- LIKE -->
 <div class="jumbotron jumbotron-fluid" id="like">
     <div class="container">
-<!--        <h1 class="display-4">LIKE</h1>-->
+        <!--        <h1 class="display-4">LIKE</h1>-->
         <br><br>
-        <h3>Share Your Love With Us</h3>
+        <h3>Like This Page</h3>
         <br><br><br>
         <div class="fb-like"
              data-href="https://developers.facebook.com/docs/plugins/"
@@ -155,14 +158,25 @@
 </div>
 <!-- LIKE -->
 
+<!-- QR -->
 <div class="jumbotron jumbotron-fluid" id="qrCode">
     <div class="container">
-        <h1 class="display-4">QR CODE</h1>
+        <!--        <h1 class="display-4">QR CODE</h1>-->
+        <div>
+            <h3>Scan QR Code For Updates</h3>
+            <br><br>
+            <img src="./resources/qr-code.png" alt="" id="qrCodeImg">
+        </div>
     </div>
 </div>
+<!-- QR -->
 
+<!-- QA -->
 <div class="jumbotron jumbotron-fluid" id="qa">
-<!--    <h1 class="display-4">Q&A</h1>-->
+    <!--    <h1 class="display-4">Q&A</h1>-->
+    <div class="container">
+        <h3>Top Q&A</h3>
+    </div>
     <br><br>
     <div class="container w-50" id="chat-box-div">
         <div class="container">
@@ -172,65 +186,92 @@
                 פרט שלושה הבדלים עיקריים לפי דעתך בין web2 ,web1 ו web3!
             </p>
         </div>
-<!--        <span class="time-right">11:00</span>-->
+        <!--        <span class="time-right">11:00</span>-->
         <div class="container darker">
             <img src="./resources/me.JPG" alt="Avatar" class="right">
-            <p dir="rtl">ההבדל העיקרי בין שלושת הדורות הוא צורת
+            <p dir="rtl">
+                ההבדל העיקרי בין שלושת הדורות הוא צורת
                 התקשורת בין אתר האינטרנט למשתמש. בדור Web1 אין תקשורת בין האתר למשתמש וזאת מפני
-                שWeb1 הוא דור Read-Only. לעומת זאת בדורות Web2 וWeb3 כבר מתחילה להיות תקשורת
-                בין המשתמש לאתר.
-                </p>
-        </div>
-        <div class="container darker">
-            <img src="./resources/me.JPG" alt="Avatar" class="right">
-            <p dir="rtl">בדור Web2 למשתמשים רבים יש את האפשרות לפרסם
-                תוכן מלשהם באמצעות צעדים בסיסיים בלבד, דבר שלא היה אפשרי בWeb1.</p>
+                שבדור זה תוכן האתר סטטי ונגזר אך ורק ממערכת הקבצים של השרת.
+            </p>
         </div>
         <div class="container darker">
             <img src="./resources/me.JPG" alt="Avatar" class="right">
             <p dir="rtl">
-                שיטה Web3 בנוסף לאמור לעיל היא גם שיטה סמנטית בה
-                המחשב יכול לחשוב בהגיון בנוגע למידע מסוים ויכול להגיע למסקנות על סמך
-                מידע זה ולא רק להתאים מילות מפתח שהמשתמש הזין.
+                בדורות הבאים כבר מתחילה להיות אינטרקציה בין המשתמש לאתר.
             </p>
         </div>
-<!--        <span class="time-left">11:01</span>-->
+        <div class="container darker">
+            <img src="./resources/me.JPG" alt="Avatar" class="right">
+            <p dir="rtl">
+                בדור Web2 למשתמשים מסויימים יש אפשרות לערוך את תוכן האתר, אתרים כמו בלוגים ורשתות חברתיות.
+            </p>
+        </div>
+        <div class="container darker">
+            <img src="./resources/me.JPG" alt="Avatar" class="right">
+            <p dir="rtl">
+                בדור Web3 בנוסף לדור הקודם היא שמה דגש על שיתוף המידע. משתמשים שונים
+                צופים באותו התוכן באמצעות views שונים. דור זה מאופיין באמצעות AI וקריאה סמנטית של תוכן האתר וקלט המשתמש.
+            </p>
+        </div>
+        <!--        <span class="time-left">11:01</span>-->
         <div class="container">
             <img src="./resources/roi.JPG" alt="Avatar">
             <p dir="rtl">
                 שאלה:
-                הסבר את ההבדלים על ידי דוגמה של תרחיש שימוש (Use Case) למשל יראה בצורה מסוימת ב-web1 ובצורה אחרת ב-web3!
+                הסבר את ההבדלים על ידי דוגמה של תרחיש שימוש (Use Case) כיצד חיפוש יראה בצורה מסוימת ב-web1 ובצורה אחרת
+                ב-web3!
             </p>
         </div>
-<!--        <span class="time-right">11:02</span>-->
+        <!--        <span class="time-right">11:02</span>-->
         <div class="container darker">
             <img src="./resources/me.JPG" alt="Avatar" class="right">
-            <p dir="rtl">Nah, I dunno. Play soccer.. or learn more coding perhaps?</p>
+            <p dir="rtl">חיפוש "תופעות לוואי של תרופות" בדור web1 יתייחס למונח עצמו ככתבו ולא יחפש דימיון סמנטי לביטוי
+                בתוכן האתר.</p>
         </div>
-<!--        <span class="time-left">11:05</span>-->
+        <div class="container darker">
+            <img src="./resources/me.JPG" alt="Avatar" class="right">
+            <p dir="rtl">בדור web3 החיפוש יתייחס למונח כרעיון ויחפש דימיון סמנטי לביטוי בתוכן האתר ובתוכן נסתר באתר
+                דוגמת תגיות תיאור שלתמונות ותיאור של הדף.</p>
+        </div>
+        <!--        <span class="time-left">11:05</span>-->
     </div>
 </div>
+<!-- QA -->
 
+<!-- CONTACT ME -->
 <div class="jumbotron jumbotron-fluid" id="contactMe">
-    <div class="container w-50">
-<!--        <h1 class="display-4">CONTACT ME</h1>-->
-        <br><br>
+    <div class="container">
         <h3>Feel Free To Keep In Touch</h3>
+    </div>
+    <div class="container">
+        <!--        <h1 class="display-4">CONTACT ME</h1>-->
         <br><br>
-        <div class="justify-content-center">
-            <form action="mailto:fadidadavid4@gmail.com" id="contact-form">
-                <div class="form-group col-6">
-                    <label for="exampleFormControlInput1">From:</label>
-                    <input type="email" class="form-control form" id="exampleFormControlInput1">
-                    <br>
-                    <input type="text" class="form-control form" id="exampleFormControlInput2" placeholder="Subject">
-                    <br>
-                    <label for="exampleFormControlTextarea1">Content:</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
-                    <br>
-                    <input type="submit" value="SEND" class="btn btn-outline-light" id="submit-mail">
+        <div class="container justify-content-center" id="space">
+            <div class="row" id="shadow-me">
+                <div class="col-8 form-group">
+                    <form action="mailto:fadidadavid4@gmail.com" id="contact-form">
+                        <!--                    <label for="exampleFormControlInput1">From</label>-->
+                        <input type="email" class="form-control form" placeholder="FROM"
+                               id="exampleFormControlInput1" autocomplete=“off” value="faidadavid4@gmail.com">
+                        <br>
+                        <!--                    <label for="exampleFormControlInput2">Title:</label>-->
+                        <input type="text" class="form-control form" placeholder="TITLE"
+                               id="exampleFormControlInput2" autocomplete=“off” value="Good Job">
+                        <br>
+                        <label for="exampleFormControlTextarea1">Content:</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                        <br>
+                        <input type="submit" value="SEND" class="btn" id="submit-mail">
+                        <!--                    <input type="reset" value="RESET" class="btn" id="reset-mail">-->
+                    </form>
                 </div>
-            </form>
+                <div class="col-4 logo-div">
+                    <h1>
+                        <i class="far fa-3x fa-envelope" id="mail"></i>
+                    </h1>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -239,26 +280,38 @@
 <div class="jumbotron jumbotron-fluid" id="footer">
     <div class="container">
         <h1>
-            <!-- Linkedin -->
-            <a class="p-2 fa-md ins-ic">
+            <!-- LINKEDIN -->
+            <a class="p-2 fa-md ins-ic" href="https://www.linkedin.com/in/david-fadida" class="social-link">
                 <i class="fab fa-lg fa-linkedin"></i>
             </a>
-            <a class="p-2 fa-md git-ic">
+            <!-- GIT -->
+            <a class="p-2 fa-md git-ic" href="https://github.com/David-Fadida" class="social-link">
                 <i class="fab fa-lg fa-github"> </i>
             </a>
             <span>CREATED BY DAVID FADIDA</span> <span>MARCH 2020</span>
+        </h1>
     </div>
 </div>
 <!-- FOOTER -->
 
+
+<!-- REMOVE INPUT CACHE -->
+<script>
+    document.querySelectorAll('input[type=text], input[type=email]').forEach(
+        input => {
+            input.setAttribute('autocomplete', 'off')
+        }
+    );
+</script>
 <!-- FACEBOOK -->
 <div id="fb-root"></div>
-<script async defer crossorigin="anonymous" src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v6.0"></script>
-
+<script async defer crossorigin="anonymous"
+        src="https://connect.facebook.net/he_IL/sdk.js#xfbml=1&version=v6.0"></script>
 <!-- FONT AWESOME -->
 <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"
         integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ"
         crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/f6a2967fd7.js" crossorigin="anonymous"></script>
 <!-- SLOW SCROLL -->
 <script>
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -270,7 +323,6 @@
         });
     });
 </script>
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </body>
