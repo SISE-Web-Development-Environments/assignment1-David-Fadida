@@ -284,10 +284,7 @@ h4{
     box-shadow: none !important;
 }
 #exampleFormControlTextarea1 {
-    background: none;
-    border: #191B1E solid 2px;
     text-align: left;
-    color: #191B1E;
     font-weight: 700;
     font-size: 1em;
     background: #a7a7a7;
@@ -295,6 +292,24 @@ h4{
     border-bottom: #676969 solid 2px;
     color: #191b1e;
 }
+#contact-form .emojionearea-editor{
+    text-align: left;
+    font-weight: 700;
+    font-size: 1em;
+    background: #a7a7a7;
+    border: none;
+    border-bottom: #676969 solid 2px;
+    color: #191b1e;
+    height: 300px;
+}
+#contact-form .emojionearea-button-open,
+#contact-form .emojionearea-button-close{
+    font-weight: 700;
+    font-size: 1em;
+    /*background: #a7a7a7;*/
+    color: #191b1e !important;
+}
+
 
 #submit-mail, #reset-mail {
     background: #a7a7a7;
@@ -330,7 +345,7 @@ h4{
     /*padding: 20px;*/
     /*box-shadow: -2px 4px 15px 5px #222222;*/
     /*box-shadow: 2px 2px 8px #222222;*/
-    padding-top: 18%;
+    padding-top: 25%;
 }
 #mail{
     color: #d5d5d5 !important;

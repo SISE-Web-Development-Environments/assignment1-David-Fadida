@@ -12,6 +12,9 @@
 
     <!-- JQUERY -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+    <link rel="stylesheet" href="./css/emojionearea.min.css">
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script type="text/javascript" src="./js/emojionearea.min.js"></script>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Bad+Script|Gloria+Hallelujah&display=swap" rel="stylesheet">
@@ -260,7 +263,7 @@
                                id="exampleFormControlInput2" autocomplete=“off” value="Good Job">
                         <br>
                         <label for="exampleFormControlTextarea1">Content:</label>
-                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="4"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="5" style="display: none"></textarea>
                         <br>
                         <input type="submit" value="SEND" class="btn" id="submit-mail">
                         <!--                    <input type="reset" value="RESET" class="btn" id="reset-mail">-->
@@ -275,7 +278,18 @@
         </div>
     </div>
 </div>
-
+<!-- EMOJI ADDER -->
+<script>
+    $(document).ready(function() {
+        $("#exampleFormControlTextarea1").emojioneArea({
+            pickerPosition: "left",
+            tonesStyle: "bullet",
+            recentEmojis: false,
+            search: false,
+            tones: false,
+        });
+    })
+</script>
 <!-- FOOTER -->
 <div class="jumbotron jumbotron-fluid" id="footer">
     <div class="container">
